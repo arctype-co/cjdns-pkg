@@ -1,0 +1,11 @@
+[Unit]
+Description=cjdns networking
+After=network.target
+
+[Service]
+Restart=always
+WorkingDirectory=/
+ExecStart=/bin/sh -c "exec /usr/bin/cjdroute < /etc/cjdroute.conf"
+
+[Install]
+WantedBy=default.target
