@@ -1,5 +1,5 @@
 Package: cjdns
-Version: 0.20.0
+Version: 0.20.0-rc1
 Section: net
 Maintainer: Ryan Sundberg <ryan@arctype.co>
 Architecture: arm64
