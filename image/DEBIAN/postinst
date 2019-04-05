@@ -1,5 +1,11 @@
 #!/bin/bash
 
+if [ ! -f /etc/cjdroute.conf ]; then
+  /usr/bin/cjdroute --genconf \
+    | sed 's/"noBackground":0/"noBackground":1/' \
+    > /etc/cjdroute.conf
+fi
+
 systemctl daemon-reload
 systemctl -f enable cjdns
 systemctl restart cjdns
